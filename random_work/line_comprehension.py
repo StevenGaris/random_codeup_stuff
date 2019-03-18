@@ -24,20 +24,29 @@ uppercased_fruits = [i.upper() for i in fruits]
 capitalized_fruits = [i.title() for i in fruits]
 # print(capitalized_fruits)
 
-#
+
 # Use a list comprehension to make a variable named fruits_with_more_than_two_vowels.
 # Hint: You'll need a way to check if something is a vowel.
 
-def vowel():
-    if word 
+
+def vowel(word):
+    vowel_count = 0
+    for letter in word:
+        if letter in 'aeiou':
+            vowel_count += 1
+
+    return vowel_count
 
 
+fruits_with_more_than_two_vowels = [word for word in fruits if vowel(word) > 2]
+# print(fruits_with_more_than_two_vowels)
 
 
-
-#
 # Make a variable named fruits_with_only_two_vowels. The result should be ['mango', 'kiwi']
-#
+
+fruits_with_only_two_vowels = [word for word in fruits if vowel(word) == 2]
+# print(fruits_with_only_two_vowels)
+
 # Make a list that contains each fruit with more than 5 characters
 
 more_than_5 = [word for word in fruits if len(word) > 5]
@@ -100,6 +109,7 @@ two_num = [num for num in numbers if num > 9 or num < -9]
 
 # Make a variable named numbers_squared that contains the numbers list with each element squared. Output is [4, 9, 16, etc...]
 
+
 numbers_squared = [n**2 for n in numbers]
 # print(numbers_squared)
 
@@ -111,10 +121,6 @@ odd_negative_numbers = [num for num in numbers if num < 0 and num % 2 == 1]
 
 
 # Make a variable named primes that is a list containing the prime numbers in the numbers list.
-
-primes = [num for num in numbers if num % num in range(1,9) != 0]
-print(primes)
-
 
 
 
